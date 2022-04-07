@@ -1,7 +1,8 @@
-//selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
+otroText = dropArea.querySelector("#un-div"),
 button = dropArea.querySelector("button"),
+
 input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
@@ -22,11 +23,13 @@ dropArea.addEventListener("dragover", (event)=>{
   event.preventDefault(); //preventing from default behaviour
   dropArea.classList.add("active");
   dragText.textContent = "Release to Upload File";
+
 });
 
 //If user leave dragged File from DropArea
 dropArea.addEventListener("dragleave", ()=>{
   dropArea.classList.remove("active");
+
   dragText.textContent = "Drag & Drop to Upload File";
 });
 
@@ -58,4 +61,5 @@ function showFile(){
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
   }
+  console.log(new Date());
 }
