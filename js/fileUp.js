@@ -1,4 +1,3 @@
-//selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
 button = dropArea.querySelector("button"),
@@ -58,4 +57,5 @@ function showFile(){
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
   }
+  console.log(new Date());
 }
