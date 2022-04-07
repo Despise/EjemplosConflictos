@@ -1,7 +1,9 @@
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
-otroText = dropArea.querySelector("#un-div"),
+otroText2 = dropArea.querySelector("#un-div"),
+//otra cosa
 button = dropArea.querySelector("button"),
+otroText = dropArea.querySelector("#un-div")
 
 input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
@@ -40,6 +42,16 @@ dropArea.addEventListener("drop", (event)=>{
   file = event.dataTransfer.files[0];
   showFile(); //calling function
 });
+
+
+function showData() {
+  let data = new Date();
+  dia = data.getDay();
+  mes = data.getMonth();
+  anio = data.getFullYear();
+
+  return dia+"-"+mes+"-"+anio;
+}
 
 function showFile(){
   let fileType = file.type; //getting selected file type
